@@ -1,4 +1,4 @@
-# TensorFlow学习笔记
+# TensorFlow学习
 
 主要来源和参考的资料为：炼数成金视频《深度学习框架TensorFlow学习与应用》
 
@@ -19,19 +19,31 @@
 第12周 Tensorflow在NLP中的使用(二)
 ```
 
-在线观看地址：
+1)在线观看地址：
 
 - YouTube：[tensorflow教程（十课）](https://www.youtube.com/watch?v=eAtGqz8ytOI&list=PLjSwXXbVlK6IHzhLOMpwHHLjYmINRstrk&index=2&t=0s)
 - B 站：[《深度学习框架TensorFlow学习与应用》](https://www.bilibili.com/video/av20542427/)
 
-其他学习资料：
+2)下载：
+
+- 《深度学习框架Tensorflow学习与应用》（含视频+代码+课件，视频总时长：13小时31分钟）
+
+  > 链接: https://pan.baidu.com/s/16OINOrFiRXbqmqOFjCFzLQ 密码: 1a8j
+
+- 《深度学习框架Tensorflow学习与应用[只有videos-720p]》（该份资料只有视频文件）
+
+  > 链接: https://pan.baidu.com/s/1oQLgWFEBsVrcKJN4swEdzg 密码: i3e2
+
+
+
+*其他学习视频（觉得有必要可以去看看）：* 
 
 - 油管视频：[TF Girls 修炼指南](https://www.youtube.com/watch?v=TrWqRMJZU8A&list=PLwY2GJhAPWRcZxxVFpNhhfivuW0kX15yG&index=2) 、或 B 站观看： [TF Girls 修炼指南](https://space.bilibili.com/16696495/#/channel/detail?cid=1588) 
 - 油管视频：51CTO视频 [深度学习框架-Tensorflow案例实战视频课程](https://www.youtube.com/watch?v=-pYU4ub7g0c&list=PL8LR_PrSuIRhpEYA3sJ-J5hYGYUSwZwdS)、或 B 站观看：[深度学习框架-Tensorflow案例实战视频课程](https://www.bilibili.com/video/av29663946/?p=1)
 
 ---
 
-## TensorFlow快速入门
+## TensorFlow快速入门之简短总结
 
 参考「机器之心」编译文章：
 
