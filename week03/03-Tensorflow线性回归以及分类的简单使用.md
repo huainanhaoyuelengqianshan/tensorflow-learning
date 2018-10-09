@@ -186,7 +186,7 @@ Iter 20,Testing Accuracy 0.9137
 
 关于载入数据集代码`mnist = input_data.read_data_sets("MNIST_data", one_hot=True)`补充下：
 
-1. 第一个参数直接填写文件夹名称，则表示使用的为当前程序路径，可以改为其他目录，比如`D:\mnist_data`
+1. 第一个参数直接填写文件夹名称，则表示使用的为当前程序路径，可以改为其他目录，比如`D:\mnist_data\`
 
 2. 下载后的数据集如下：
 

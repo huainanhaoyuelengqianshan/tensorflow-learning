@@ -347,7 +347,7 @@ with tf.Session() as sess:
 
 PS：我的笔记本跑不动啊o(╥﹏╥)o  我的笔记本显卡不支持深度学习框架啊。显卡是否支持深度学习得看是否支持 CUDA（Compute Unified Device Architecture，统一计算设备架构），如何查看显卡型号是否支持 CUDA：[TensorFlow-GPU：查看电脑显卡型号是否支持CUDN,以及相关软件下载与介绍](https://www.cnblogs.com/chamie/p/8707420.html)
 
-遂拿到实验室 1080ti GPU 上跑吧，训练和测试过程如下：（待测验）
+遂拿实验室 1080ti GPU 上跑吧，训练和测试过程如下：
 
 ``` xml
 

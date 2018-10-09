@@ -282,25 +282,102 @@ with tf.Session() as sess:
         print("Iter " + str(epoch) + ",Testing Accuracy " + str(test_acc) + ",Training Accuracy " + str(train_acc))
 ```
 
-使用全部神经元训练过程如（待测验）
+使用全部神经元训练过程如下：（用的实验室电脑，显卡 GTX1080ti 跑的）
 
 ``` xml
-
+Extracting MNIST_data\train-images-idx3-ubyte.gz
+Extracting MNIST_data\train-labels-idx1-ubyte.gz
+Extracting MNIST_data\t10k-images-idx3-ubyte.gz
+Extracting MNIST_data\t10k-labels-idx1-ubyte.gz
+Iter 0,Testing Accuracy 0.8581,Training Accuracy 0.86703634
+Iter 1,Testing Accuracy 0.9595,Training Accuracy 0.97327274
+Iter 2,Testing Accuracy 0.9619,Training Accuracy 0.98176366
+Iter 3,Testing Accuracy 0.9658,Training Accuracy 0.98621815
+Iter 4,Testing Accuracy 0.9664,Training Accuracy 0.9884545
+Iter 5,Testing Accuracy 0.9679,Training Accuracy 0.99005455
+Iter 6,Testing Accuracy 0.9672,Training Accuracy 0.9909818
+Iter 7,Testing Accuracy 0.9692,Training Accuracy 0.99163634
+Iter 8,Testing Accuracy 0.9698,Training Accuracy 0.9921455
+Iter 9,Testing Accuracy 0.9699,Training Accuracy 0.99258184
+Iter 10,Testing Accuracy 0.97,Training Accuracy 0.993
+Iter 11,Testing Accuracy 0.97,Training Accuracy 0.9932909
+Iter 12,Testing Accuracy 0.9705,Training Accuracy 0.99349093
+Iter 13,Testing Accuracy 0.971,Training Accuracy 0.9937636
+Iter 14,Testing Accuracy 0.9714,Training Accuracy 0.99416363
+Iter 15,Testing Accuracy 0.9711,Training Accuracy 0.9943454
+Iter 16,Testing Accuracy 0.9715,Training Accuracy 0.9945091
+Iter 17,Testing Accuracy 0.9724,Training Accuracy 0.99465454
+Iter 18,Testing Accuracy 0.9715,Training Accuracy 0.9948
+Iter 19,Testing Accuracy 0.972,Training Accuracy 0.9948909
+Iter 20,Testing Accuracy 0.9716,Training Accuracy 0.99496365
+Iter 21,Testing Accuracy 0.972,Training Accuracy 0.99505454
+Iter 22,Testing Accuracy 0.9718,Training Accuracy 0.9951636
+Iter 23,Testing Accuracy 0.9716,Training Accuracy 0.9952
+Iter 24,Testing Accuracy 0.972,Training Accuracy 0.9952545
+Iter 25,Testing Accuracy 0.9722,Training Accuracy 0.9953455
+Iter 26,Testing Accuracy 0.9725,Training Accuracy 0.9954364
+Iter 27,Testing Accuracy 0.9723,Training Accuracy 0.9954909
+Iter 28,Testing Accuracy 0.9724,Training Accuracy 0.9955636
+Iter 29,Testing Accuracy 0.9731,Training Accuracy 0.9956727
+Iter 30,Testing Accuracy 0.9729,Training Accuracy 0.9957455
 ```
 
-Dropout后：（待测验）
+Dropout后：（用的实验室电脑，显卡 GTX 1080ti 跑的）
 
 ``` xml
-
+Extracting MNIST_data\train-images-idx3-ubyte.gz
+Extracting MNIST_data\train-labels-idx1-ubyte.gz
+Extracting MNIST_data\t10k-images-idx3-ubyte.gz
+Extracting MNIST_data\t10k-labels-idx1-ubyte.gz
+Iter 0,Testing Accuracy 0.9156,Training Accuracy 0.9118909
+Iter 1,Testing Accuracy 0.9313,Training Accuracy 0.9254909
+Iter 2,Testing Accuracy 0.9339,Training Accuracy 0.9346
+Iter 3,Testing Accuracy 0.9387,Training Accuracy 0.9398182
+Iter 4,Testing Accuracy 0.9445,Training Accuracy 0.9460727
+Iter 5,Testing Accuracy 0.946,Training Accuracy 0.94805455
+Iter 6,Testing Accuracy 0.9492,Training Accuracy 0.95149094
+Iter 7,Testing Accuracy 0.9514,Training Accuracy 0.95461816
+Iter 8,Testing Accuracy 0.9538,Training Accuracy 0.95716363
+Iter 9,Testing Accuracy 0.9549,Training Accuracy 0.9582545
+Iter 10,Testing Accuracy 0.9549,Training Accuracy 0.96009094
+Iter 11,Testing Accuracy 0.9584,Training Accuracy 0.96114546
+Iter 12,Testing Accuracy 0.9603,Training Accuracy 0.96312726
+Iter 13,Testing Accuracy 0.9605,Training Accuracy 0.9649091
+Iter 14,Testing Accuracy 0.9613,Training Accuracy 0.9654727
+Iter 15,Testing Accuracy 0.9626,Training Accuracy 0.9674
+Iter 16,Testing Accuracy 0.963,Training Accuracy 0.96754545
+Iter 17,Testing Accuracy 0.9636,Training Accuracy 0.96876365
+Iter 18,Testing Accuracy 0.9645,Training Accuracy 0.9701273
+Iter 19,Testing Accuracy 0.9641,Training Accuracy 0.9696909
+Iter 20,Testing Accuracy 0.9647,Training Accuracy 0.9710364
+Iter 21,Testing Accuracy 0.9659,Training Accuracy 0.97136366
+Iter 22,Testing Accuracy 0.9671,Training Accuracy 0.9731454
+Iter 23,Testing Accuracy 0.9668,Training Accuracy 0.9734727
+Iter 24,Testing Accuracy 0.9673,Training Accuracy 0.97374547
+Iter 25,Testing Accuracy 0.9687,Training Accuracy 0.97465456
+Iter 26,Testing Accuracy 0.9683,Training Accuracy 0.9756
+Iter 27,Testing Accuracy 0.9695,Training Accuracy 0.9758545
+Iter 28,Testing Accuracy 0.9717,Training Accuracy 0.9769818
+Iter 29,Testing Accuracy 0.9711,Training Accuracy 0.9771636
+Iter 30,Testing Accuracy 0.9701,Training Accuracy 0.97778183
 ```
 
-可以对比两种训练方式最后的五次训练结果：（待测验）
+可以对比两种训练方式最后的五次训练结果：
 
 ``` xml
 # 使用所有神经元：
+Iter 26,Testing Accuracy 0.9725,Training Accuracy 0.9954364
+Iter 27,Testing Accuracy 0.9723,Training Accuracy 0.9954909
+Iter 28,Testing Accuracy 0.9724,Training Accuracy 0.9955636
+Iter 29,Testing Accuracy 0.9731,Training Accuracy 0.9956727
+Iter 30,Testing Accuracy 0.9729,Training Accuracy 0.9957455
 
 # Dropout:
-
+Iter 26,Testing Accuracy 0.9683,Training Accuracy 0.9756
+Iter 27,Testing Accuracy 0.9695,Training Accuracy 0.9758545
+Iter 28,Testing Accuracy 0.9717,Training Accuracy 0.9769818
+Iter 29,Testing Accuracy 0.9711,Training Accuracy 0.9771636
+Iter 30,Testing Accuracy 0.9701,Training Accuracy 0.97778183
 ```
 
 从上面可以看到，不使用 Dropout 方法训练后训练集测试网络准确率约 99%，测试集则为 97%，而且可以看出这个结果一直保持了很久，即使训练持续进行，这便是过拟合了。然而使用了 Dropout 方法训练后，测试集和训练集最后测试网络得到的结果基本差异不大，拟合度较高。
@@ -444,10 +521,34 @@ with tf.Session() as sess:
         print("Iter " + str(epoch) + ",Testing Accuracy " + str(acc))
 ```
 
-训练过程如下：（待测验）
+训练过程如下：（用的实验室电脑，显卡 GTX 1080ti 跑的）
 
 ``` xml
-
+Extracting MNIST_data\train-images-idx3-ubyte.gz
+Extracting MNIST_data\train-labels-idx1-ubyte.gz
+Extracting MNIST_data\t10k-images-idx3-ubyte.gz
+Extracting MNIST_data\t10k-labels-idx1-ubyte.gz
+Iter 0,Testing Accuracy 0.9149
+Iter 1,Testing Accuracy 0.9255
+Iter 2,Testing Accuracy 0.9282
+Iter 3,Testing Accuracy 0.9267
+Iter 4,Testing Accuracy 0.9282
+Iter 5,Testing Accuracy 0.9239
+Iter 6,Testing Accuracy 0.9314
+Iter 7,Testing Accuracy 0.931
+Iter 8,Testing Accuracy 0.9299
+Iter 9,Testing Accuracy 0.9282
+Iter 10,Testing Accuracy 0.9318
+Iter 11,Testing Accuracy 0.93
+Iter 12,Testing Accuracy 0.9299
+Iter 13,Testing Accuracy 0.9307
+Iter 14,Testing Accuracy 0.9314
+Iter 15,Testing Accuracy 0.9325
+Iter 16,Testing Accuracy 0.9298
+Iter 17,Testing Accuracy 0.9321
+Iter 18,Testing Accuracy 0.9319
+Iter 19,Testing Accuracy 0.9314
+Iter 20,Testing Accuracy 0.9288
 ```
 
 
@@ -514,10 +615,64 @@ with tf.Session() as sess:
         print("Iter " + str(epoch) + ", Testing Accuracy= " + str(acc) + ", Learning Rate= " + str(learning_rate))
 ```
 
-训练过程如下：（待测验）
+训练过程如下：（用的实验室电脑，显卡 GTX 1080ti 跑的）
 
 ``` xml
-
+Extracting MNIST_data\train-images-idx3-ubyte.gz
+Extracting MNIST_data\train-labels-idx1-ubyte.gz
+Extracting MNIST_data\t10k-images-idx3-ubyte.gz
+Extracting MNIST_data\t10k-labels-idx1-ubyte.gz
+Iter 0, Testing Accuracy= 0.9536, Learning Rate= 0.001
+Iter 1, Testing Accuracy= 0.9608, Learning Rate= 0.00095
+Iter 2, Testing Accuracy= 0.968, Learning Rate= 0.0009025
+Iter 3, Testing Accuracy= 0.9713, Learning Rate= 0.000857375
+Iter 4, Testing Accuracy= 0.9682, Learning Rate= 0.00081450626
+Iter 5, Testing Accuracy= 0.9748, Learning Rate= 0.0007737809
+Iter 6, Testing Accuracy= 0.9749, Learning Rate= 0.0007350919
+Iter 7, Testing Accuracy= 0.9765, Learning Rate= 0.0006983373
+Iter 8, Testing Accuracy= 0.9778, Learning Rate= 0.0006634204
+Iter 9, Testing Accuracy= 0.9778, Learning Rate= 0.0006302494
+Iter 10, Testing Accuracy= 0.9779, Learning Rate= 0.0005987369
+Iter 11, Testing Accuracy= 0.9765, Learning Rate= 0.0005688001
+Iter 12, Testing Accuracy= 0.9802, Learning Rate= 0.0005403601
+Iter 13, Testing Accuracy= 0.9782, Learning Rate= 0.0005133421
+Iter 14, Testing Accuracy= 0.9804, Learning Rate= 0.000487675
+Iter 15, Testing Accuracy= 0.9803, Learning Rate= 0.00046329122
+Iter 16, Testing Accuracy= 0.9797, Learning Rate= 0.00044012666
+Iter 17, Testing Accuracy= 0.9814, Learning Rate= 0.00041812033
+Iter 18, Testing Accuracy= 0.9812, Learning Rate= 0.00039721432
+Iter 19, Testing Accuracy= 0.9815, Learning Rate= 0.0003773536
+Iter 20, Testing Accuracy= 0.9802, Learning Rate= 0.00035848594
+Iter 21, Testing Accuracy= 0.9816, Learning Rate= 0.00034056162
+Iter 22, Testing Accuracy= 0.9818, Learning Rate= 0.00032353355
+Iter 23, Testing Accuracy= 0.9817, Learning Rate= 0.00030735688
+Iter 24, Testing Accuracy= 0.981, Learning Rate= 0.000291989
+Iter 25, Testing Accuracy= 0.9812, Learning Rate= 0.00027738957
+Iter 26, Testing Accuracy= 0.9808, Learning Rate= 0.0002635201
+Iter 27, Testing Accuracy= 0.9814, Learning Rate= 0.00025034408
+Iter 28, Testing Accuracy= 0.9815, Learning Rate= 0.00023782688
+Iter 29, Testing Accuracy= 0.9814, Learning Rate= 0.00022593554
+Iter 30, Testing Accuracy= 0.9809, Learning Rate= 0.00021463877
+Iter 31, Testing Accuracy= 0.9822, Learning Rate= 0.00020390682
+Iter 32, Testing Accuracy= 0.9823, Learning Rate= 0.00019371149
+Iter 33, Testing Accuracy= 0.9824, Learning Rate= 0.0001840259
+Iter 34, Testing Accuracy= 0.9822, Learning Rate= 0.00017482461
+Iter 35, Testing Accuracy= 0.983, Learning Rate= 0.00016608338
+Iter 36, Testing Accuracy= 0.9824, Learning Rate= 0.00015777921
+Iter 37, Testing Accuracy= 0.9827, Learning Rate= 0.00014989026
+Iter 38, Testing Accuracy= 0.9827, Learning Rate= 0.00014239574
+Iter 39, Testing Accuracy= 0.9823, Learning Rate= 0.00013527596
+Iter 40, Testing Accuracy= 0.9825, Learning Rate= 0.00012851215
+Iter 41, Testing Accuracy= 0.9822, Learning Rate= 0.00012208655
+Iter 42, Testing Accuracy= 0.9821, Learning Rate= 0.00011598222
+Iter 43, Testing Accuracy= 0.9829, Learning Rate= 0.00011018311
+Iter 44, Testing Accuracy= 0.9824, Learning Rate= 0.000104673956
+Iter 45, Testing Accuracy= 0.9828, Learning Rate= 9.944026e-05
+Iter 46, Testing Accuracy= 0.9829, Learning Rate= 9.446825e-05
+Iter 47, Testing Accuracy= 0.9831, Learning Rate= 8.974483e-05
+Iter 48, Testing Accuracy= 0.9827, Learning Rate= 8.525759e-05
+Iter 49, Testing Accuracy= 0.9827, Learning Rate= 8.099471e-05
+Iter 50, Testing Accuracy= 0.9828, Learning Rate= 7.6944976e-05
 ```
 
 
