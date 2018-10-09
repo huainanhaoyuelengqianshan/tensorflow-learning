@@ -2,6 +2,8 @@
 
 ### 一、TensorFlow实现非线性回归
 
+（对应代码：`3-1非线性回归.py`）
+
 ``` python
 # coding: utf-8
 
@@ -102,6 +104,8 @@ hot 向量除了某一位数字是 1 以外，其余维度数字都是 0，比�
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/57443260.jpg)
 
 #### 4、编码实现
+
+（对应代码：`3-2MNIST数据集分类简单版本.py`）
 
 ``` python
 # coding: utf-8

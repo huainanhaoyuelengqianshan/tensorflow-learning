@@ -32,6 +32,8 @@
 - 权值太多，计算量太大
 - 权值太多，需要大量样本进行训练
 
+经验之谈：样本数量最好是参数数量的 5—30 倍。数据量小而模型参数过的多容易出现过拟合现象。
+
 #### 局部感受野
 
 > 1962 年哈佛医学院神经生理学家 Hubel 和 Wiesel 通过对猫视觉皮层细胞的研究，提出了感受野（receptive field）的概念，1984 年日本学者 Fukushima 基于感受野概念提出的神经认知机（neocognitron）可以看作是卷积神经网络的第一个实现网络，也是感受野概念在人工神经网络领域的首次应用。
@@ -144,7 +146,13 @@ pooling 层可以非常有效地缩小图片的尺寸，显著减少参数数量
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-9/24953964.jpg)
 
-（代码对应：``）
+定义 weight、bias；
+
+卷积、激活、池化、下一层；
+
+然后接 2 个全连接层，softmax，交叉熵、loss
+
+（代码对应：`6-1卷积神经网络应用于MNIST数据集分类.py`，有修改——增加了一些 scope）
 
 ``` python
 # coding: utf-8
@@ -336,6 +344,16 @@ with tf.Session() as sess:
                                                       keep_prob: 1.0})
             print("Iter " + str(i) + ", Testing Accuracy= " + str(test_acc) + ", Training Accuracy= " + str(train_acc))
 ```
+
+PS：我的笔记本跑不动啊o(╥﹏╥)o  我的笔记本显卡不支持深度学习框架啊。显卡是否支持深度学习得看是否支持 CUDA（Compute Unified Device Architecture，统一计算设备架构），如何查看显卡型号是否支持 CUDA：[TensorFlow-GPU：查看电脑显卡型号是否支持CUDN,以及相关软件下载与介绍](https://www.cnblogs.com/chamie/p/8707420.html)
+
+遂拿到实验室 1080ti GPU 上跑吧，训练和测试过程如下：（待测验）
+
+``` xml
+
+```
+
+测试的准确度在 99% 左右，还是比较高的。
 
 
 

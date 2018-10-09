@@ -65,7 +65,7 @@ tf.nn.sigmoid_cross_entropy_with_logits()来表示跟sigmoid搭配使用的交�
 tf.nn.softmax_cross_entropy_with_logits()来表示跟softmax搭配使用的交叉熵。
 ```
 
-测试如下：（对上次的手写数字识别代码修改，改为使用对数释然代价函数）
+测试如下：（对上次的手写数字识别代码修改，改为使用对数释然代价函数，对应代码：`4-1交叉熵.py`）
 
 ``` python
 # coding: utf-8
@@ -215,7 +215,7 @@ sess.run(train_step, feed_dict={x: batch_xs, y: batch_ys, keep_prob: 1.0})
 sess.run(train_step, feed_dict={x: batch_xs, y: batch_ys, keep_prob: 0.7})
 ```
 
-训练的代码如下：
+训练的代码如下：（对应代码：`4-2Dropout.py`）
 
 ``` python
 # coding: utf-8
@@ -392,6 +392,8 @@ RMSprop 借鉴了一些 Adagrad 的思想，不过这里 RMSprop 只用到了前
 
 就像 Adadelta 和 RMSprop 一样 Adam 会存储之前衰减的平方梯度，同时它也会保存之前衰减
 的梯度。经过一些处理之后再使用类似 Adadelta 和 RMSprop 的方式更新参数。
+
+关于优化器优缺点及选择网上有不错的总结：[关于深度学习优化器 optimizer 的选择，你需要了解这些](https://blog.csdn.net/g11d111/article/details/76639460)
 
 下面使用 `tf.train.AdadeltaOptimizer` 来训练手写数字：
 
