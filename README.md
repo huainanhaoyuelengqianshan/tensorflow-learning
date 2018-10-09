@@ -19,6 +19,8 @@
 第12周 Tensorflow在NLP中的使用(二)
 ```
 
+——修正：实际第 5 周讲的为 Tensorborad 结构可视化，第 6 周讲的为 CNN。
+
 1)在线观看地址：
 
 - YouTube：[tensorflow教程（十课）](https://www.youtube.com/watch?v=eAtGqz8ytOI&list=PLjSwXXbVlK6IHzhLOMpwHHLjYmINRstrk&index=2&t=0s)
