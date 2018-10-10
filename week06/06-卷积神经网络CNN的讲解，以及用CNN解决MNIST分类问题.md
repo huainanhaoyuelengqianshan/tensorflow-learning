@@ -110,15 +110,15 @@ VALID PADDING：不会超出平面外部，卷积窗口采样后得到一个比�
 
 #### 卷积
 
-单通道图像卷积过程（下图使用了一个卷积核卷积）：
+单通道图像卷积过程（如下使用了一个卷积核卷积）：
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-9/30544234.jpg)
 
-动态图观察过程：
+动态图过程：
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-9/3764121.jpg)
 
-三通道（R、G、B ，可以理解为深度为 3）图像卷积过程（下图使用了两个卷积核卷积）：
+三通道（R、G、B ，可以理解为深度为 3）图像卷积过程（如下使用了两个卷积核卷积）：
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-9/43496624.jpg)
 
@@ -345,9 +345,9 @@ with tf.Session() as sess:
             print("Iter " + str(i) + ", Testing Accuracy= " + str(test_acc) + ", Training Accuracy= " + str(train_acc))
 ```
 
-PS：我的笔记本跑不动啊o(╥﹏╥)o  我的笔记本显卡不支持深度学习框架啊。显卡是否支持深度学习得看是否支持 CUDA（Compute Unified Device Architecture，统一计算设备架构），如何查看显卡型号是否支持 CUDA：[TensorFlow-GPU：查看电脑显卡型号是否支持CUDN,以及相关软件下载与介绍](https://www.cnblogs.com/chamie/p/8707420.html)
+PS：我的笔记本跑不动啊o(╥﹏╥)o  我的笔记本显卡不支持深度学习框架。显卡是否支持深度学习得看是否支持 CUDA（Compute Unified Device Architecture），如何查看显卡型号是否支持 CUDA：[TensorFlow-GPU：查看电脑显卡型号是否支持CUDN,以及相关软件下载与介绍](https://www.cnblogs.com/chamie/p/8707420.html)
 
-遂拿实验室 1080ti GPU 上跑吧，训练和测试过程如下：
+遂还是拿实验室显卡，显卡 1080ti GPU 上跑吧，训练和测试过程如下：
 
 ``` xml
 
