@@ -184,6 +184,14 @@ saver.restore(sess,'net/my_net.ckpt')
 
 ### 二、使用Google的图像识别网络inception-v3进行图像识别
 
+先了解下 inception 网络模型，参考博客：
+
+- [TensorFlow学习笔记：使用Inception v3进行图像分类](https://www.jianshu.com/p/cc830a6ed54b)
+- [Google Inception Net介绍及Inception V3结构分析](https://blog.csdn.net/weixin_39881922/article/details/80346070)
+- [深入浅出——网络模型中Inception的作用与结构全解析](https://blog.csdn.net/u010402786/article/details/52433324)
+- [tensorflow+inceptionv3图像分类网络结构的解析与代码实现【附下载】](https://blog.csdn.net/k87974/article/details/80221215)
+- ......
+
 #### 1、下载inception-v3网络模型
 
 （对应代码：`8-3下载google图像识别网络inception-v3并查看结构.py`）
@@ -264,7 +272,9 @@ inception_model 文件夹下是保存的训练结果：（其他文件其实都�
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/98506442.jpg)
 
-简单说明：左侧文件中 target_class 后面的数字代表目标的分类，数值为 1——1000（inception 模型是用来做 1000 个分类的），target_class_string 后面的字符串值对应到右侧文件的第一列，右侧文件的第二列表示对第一列的描述，即相当对分类的描述。
+简单说明：左侧文件中 target_class 后面的数字代表目标的分类，数值为 1——1000（inception 模型是用来做 1000 个分类的），target_class_string 后面的字符串值对应到右侧文件的第一列，右侧文件的第二列表示对第一列的描述，相当是对分类的描述，从而来表示属于哪一类。
+
+在运行代码之前，先网上找几张图片保存在当前程序路径的 images 目录下。
 
 完整代码如下：（对应代码：`8-4使用inception-v3做各种图像的识别.py`）
 
@@ -377,36 +387,74 @@ with tf.Session() as sess:
 
 代码中，程序的头读取了两个文件：
 
-``` python
-	label_lookup_path = 'inception_model/imagenet_2012_challenge_label_map_proto.pbtxt'   
+``` xml
+    label_lookup_path = 'inception_model/imagenet_2012_challenge_label_map_proto.pbtxt'   
     uid_lookup_path = 'inception_model/imagenet_synset_to_human_label_map.txt'
 ```
 
 代码中，类  `NodeLookup` 的目的就是建立两个文件之间的关系，将`inception_model/imagenet_2012_challenge_label_map_proto.pbtxt`中的 target_class 对应于`inception_model/imagenet_synset_to_human_label_map.txt`中的类。
 
+最后的排序代码解释下：
+
+``` python
+			#排序
+            top_k = predictions.argsort()[-5:][::-1]
+            print('top_k:', top_k)
+            node_lookup = NodeLookup()
+            for node_id in top_k:     
+                #获取分类名称
+                human_string = node_lookup.id_to_string(node_id)
+                #获取该分类的置信度
+                score = predictions[node_id]
+                print('%s (score = %.5f)' % (human_string, score))
+            print()
+```
+
+因为概率从小到大排序，所以如上第一行代码表示从倒数第 5 的位置开始取至倒数第 1 的位置，从而得到概率顺序从小到大的前 5 的概率值，再对这 5 个值做个倒序，进而得到从大到小的 5 个概率值。
+
 最后的运行结果如下：
 
-> images/Alpaca .jpg
->
-> ![](https://i.imgur.com/nLJAiOn.png)
->
-> top_k: [186  48  23 121 103]
-> llama (score = 0.60256)
-> weasel (score = 0.05737)
-> mink (score = 0.01112)
-> Arabian camel, dromedary, Camelus dromedarius (score = 0.01053)
-> ice bear, polar bear, Ursus Maritimus, Thalarctos maritimus (score = 0.00909)
->
->
->
-> images/haski .jpeg
->
-> ![](https://i.imgur.com/Bjw0ACb.png)
->
-> top_k: [  3 149  15 102 155]
-> Siberian husky (score = 0.59750)
-> Eskimo dog, husky (score = 0.27153)
-> malamute, malemute, Alaskan malamute (score = 0.00640)
-> white wolf, Arctic wolf, Canis lupus tundrarum (score = 0.00503)
-> dingo, warrigal, warragal, Canis dingo (score = 0.00381)
+``` xml
+images/lion.jpg
+```
 
+![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/34173500.jpg)
+
+``` xml
+top_k: [190  11 206  85  30]
+lion, king of beasts, Panthera leo (score = 0.96306)
+cougar, puma, catamount, mountain lion, painter, panther, Felis concolor (score = 0.00161)
+cheetah, chetah, Acinonyx jubatus (score = 0.00079)
+leopard, Panthera pardus (score = 0.00057)
+jaguar, panther, Panthera onca, Felis onca (score = 0.00033)
+```
+
+``` xml
+images/panda.jpg
+```
+
+![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/5249455.jpg)
+
+``` xml
+top_k: [169   7 222 374 878]
+giant panda, panda, panda bear, coon bear, Ailuropoda melanoleuca (score = 0.96960)
+lesser panda, red panda, panda, bear cat, cat bear, Ailurus fulgens (score = 0.00078)
+soccer ball (score = 0.00067)
+lawn mower, mower (score = 0.00065)
+earthstar (score = 0.00040)
+```
+
+``` xml
+images/rabbit.jpg
+```
+
+![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/48396384.jpg)
+
+``` xml
+top_k: [164 840 129 950 188]
+Angora, Angora rabbit (score = 0.36784)
+hamper (score = 0.17425)
+hare (score = 0.13834)
+shopping basket (score = 0.10668)
+wood rabbit, cottontail, cottontail rabbit (score = 0.04976)
+```
