@@ -86,7 +86,7 @@ LSTM 全称叫 Long Short-Term Memory networks，它和传统 RNN 唯一的不�
 
 > 这节来讲下 LSTM 在 TensorFlow 中的实现。LSTM 主要用在语言、文本等序列化问题上，但是呢，同样地也可以用在图像上，做图像分类其实也是可以的。下面通过简单例子来讲解下是怎么实现的。
 
-（代码对应：`7-2递归神经网络RNN.py`，下面代码导入了 rnn，使用了 tf1.0 之后版本 LSTM 基本 CELL）
+（对应代码：`7-2递归神经网络RNN.py`，下面代码导入了 rnn，使用了 tf1.0 之后版本 LSTM 基本 CELL）
 
 ``` python
 # coding: utf-8
