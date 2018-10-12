@@ -266,7 +266,7 @@ else:
 
 最后生成：（截图自视频）
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/70387450.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com//20181012142033.jpg)
 
 ##### 验证码识别
 
@@ -697,14 +697,14 @@ with tf.Session() as sess:
 
 测试结果：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/85326316.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com//20181012142132.jpg)
 
 ``` xml
 label: [5] [1] [3] [7]
 predict: [5] [0] [3] [7]
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/20572692.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com//20181012142044.jpg)
 
 ``` xml
 label: [6] [3] [5] [0]
