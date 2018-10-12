@@ -272,7 +272,11 @@ else:
 
 （3）验证码识别
 
-修改 `slim\nets\alexnet.py` 网络结构以满足我们的需求，修改后的文件内容：
+拷贝 `slim\nets\` 目录到我们程序代码的相同路径（在下面的验证码识别代码中我们会导入 nets）。
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181012183851.png)
+
+然后修改 `nets\alexnet.py` 网络结构以满足我们的需求，修改后的文件内容：
 
 ``` python
 from __future__ import absolute_import

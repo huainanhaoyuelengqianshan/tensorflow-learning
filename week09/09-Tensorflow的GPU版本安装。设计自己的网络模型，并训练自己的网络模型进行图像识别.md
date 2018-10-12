@@ -194,6 +194,8 @@ plane
 
 为训练集合的标签分类。
 
+注意：output\_labels.txt  文件用 Windows7 自带的文本编辑器打开显示的是标签分类是连在一起，没有换行，官方是有换行的，用 Notepad++ 编辑器是如上正常显示。
+
 #### 3、模型测试
 
 完整代码如下：（对应代码：`9-1测试训练好的模型.py`）
@@ -266,11 +268,67 @@ with tf.Session() as sess:
             plt.show()
 ```
 
-测试结果如下：（待测验）
+测试结果如下：（用实验室电脑，显卡 GTX 1080ti 跑的）
 
+``` xml
+retain\images\animal.jpg
+[0 1 3 4 2]
+animal (score = 0.78572)
+flower (score = 0.07398)
+house (score = 0.06210)
+plane (score = 0.05573)
+guitar (score = 0.02246)
+```
 
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202426.jpg)
 
+``` xml
+E:\Python-projects\mnist\retrain\images\flower.jpg
+[1 0 4 3 2]
+flower (score = 0.93735)
+animal (score = 0.02391)
+plane (score = 0.01805)
+house (score = 0.01259)
+guitar (score = 0.00810)
+```
 
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202432.jpg)
+
+``` xml
+E:\Python-projects\mnist\retrain\images\guitar.jpg
+[2 4 0 3 1]
+guitar (score = 0.98568)
+plane (score = 0.00405)
+animal (score = 0.00355)
+house (score = 0.00346)
+flower (score = 0.00325)
+```
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202436.jpg)
+
+``` xml
+E:\Python-projects\mnist\retrain\images\house.jpg
+[3 1 0 4 2]
+house (score = 0.94151)
+flower (score = 0.02240)
+animal (score = 0.01652)
+plane (score = 0.01133)
+guitar (score = 0.00824)
+```
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202439.jpg)
+
+``` xml
+E:\Python-projects\mnist\retrain\images\plane.jpg
+[4 0 2 1 3]
+plane (score = 0.96458)
+animal (score = 0.01224)
+guitar (score = 0.00790)
+flower (score = 0.00771)
+house (score = 0.00758)
+```
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202441.jpg)
 
 ### 三、从头开始训练新的模型
 
@@ -280,7 +338,7 @@ with tf.Session() as sess:
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/32645120.jpg)
 
-!!!准备工作：在 https://github.com/tensorflow/models 提供了很多官方的模型，这节我们要用的 slim 模型，先下载 slim（新版中 slim 路径已经处在：[models](https://github.com/tensorflow/models)/[research](https://github.com/tensorflow/models/tree/master/research)/[slim](https://github.com/tensorflow/models/tree/master/research/slim)，不是视频中的 models 目录下）。slim 文件如下：
+!!!准备工作：在 https://github.com/tensorflow/models 提供了很多官方的模型，这节我们要用的 slim 模型，先下载 slim（新版中 slim 路径位置已经处在：[models](https://github.com/tensorflow/models)/[research](https://github.com/tensorflow/models/tree/master/research)/[slim](https://github.com/tensorflow/models/tree/master/research/slim)，不是视频中的 models 目录下）。slim 文件如下：
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/42918227.jpg)
 

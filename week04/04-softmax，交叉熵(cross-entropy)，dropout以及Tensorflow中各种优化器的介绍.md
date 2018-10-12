@@ -472,7 +472,7 @@ RMSprop 借鉴了一些 Adagrad 的思想，不过这里 RMSprop 只用到了前
 
 关于优化器优缺点及如何选择网上有不错的总结：[关于深度学习优化器 optimizer 的选择，你需要了解这些](https://blog.csdn.net/g11d111/article/details/76639460)
 
-下面使用 `tf.train.AdadeltaOptimizer` 来训练手写数字：
+下面使用 `tf.train.AdadeltaOptimizer` 来训练手写数字：（对应代码：`4-3优化器.py`）
 
 ``` python
 # coding: utf-8
