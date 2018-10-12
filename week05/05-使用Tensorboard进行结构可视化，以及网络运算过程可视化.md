@@ -73,7 +73,7 @@ with tf.Session() as sess:
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/3161246.jpg)
 
-打开浏览器，输入：http://Jaybo-pc:6006，可以看到：
+打开浏览器，输入`http://Jaybo-pc:6006`，可以看到：
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/11610986.jpg)
 

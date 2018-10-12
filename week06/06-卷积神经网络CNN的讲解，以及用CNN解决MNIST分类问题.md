@@ -23,7 +23,7 @@
 >
 > ![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/28008326.jpg)
 
-应用到计算机视觉方向来说，简单来说就是深度学习可以自己学习到图像特征（其背后数学层面来看，也就是学到一个含非常多参数的函数），而不要我们自己去提取特征，即，不要我们去定义具有怎样特征才是猫，是否头部近圆形，颜面部短，耳呈三角形这样的特征才是猫，我们不用关心，深度学习能自动学习到特征（当然其实我们也不知道它到底学到了什么特征，所以被很多人称为「黑匣子」，可以看这篇文章 [1.1.1 什么是神经网络](https://blog.csdn.net/jiangjunshow/article/details/77368314) 体会下为什么这么说）。
+应用到计算机视觉方向来说，简单来说就是深度学习可以自己学习到图像特征（其背后数学层面来看，也就是学到一个含非常多参数的函数），而不要我们自己去提取特征，即，不要我们去定义具有怎样特征才是猫，比如是否头部近圆形，颜面部短，耳呈三角形这样的特征才是猫，我们不用关心，深度学习能自动学习到特征（当然其实我们也不知道它到底学到了什么特征，所以被很多人称为「黑匣子」，可以看这篇文章 [1.1.1 什么是神经网络](https://blog.csdn.net/jiangjunshow/article/details/77368314) 体会下为什么这么说）。
 
 传统经典网络存在的问题：
 
@@ -152,7 +152,7 @@ pooling 层可以非常有效地缩小图片的尺寸，显著减少参数数量
 
 然后接 2 个全连接层，softmax，交叉熵、loss
 
-（代码对应：`6-1卷积神经网络应用于MNIST数据集分类.py`，有修改——增加了一些 scope）
+（代码对应：`6-1卷积神经网络应用于MNIST数据集分类.py`，有修改——增加了 scope）
 
 ``` python
 # coding: utf-8
@@ -345,7 +345,9 @@ with tf.Session() as sess:
             print("Iter " + str(i) + ", Testing Accuracy= " + str(test_acc) + ", Training Accuracy= " + str(train_acc))
 ```
 
-PS：我的笔记本跑不动啊o(╥﹏╥)o  我的笔记本显卡不支持深度学习框架。显卡是否支持深度学习得看是否支持 CUDA（Compute Unified Device Architecture），如何查看显卡型号是否支持 CUDA：[TensorFlow-GPU：查看电脑显卡型号是否支持CUDN,以及相关软件下载与介绍](https://www.cnblogs.com/chamie/p/8707420.html)
+PS：我的笔记本跑不动啊o(╥﹏╥)o  显卡不支持深度学习框架。
+
+显卡是否支持深度学习得看是否支持 CUDA（Compute Unified Device Architecture），如何查看显卡型号是否支持 CUDA：[TensorFlow-GPU：查看电脑显卡型号是否支持CUDN,以及相关软件下载与介绍](https://www.cnblogs.com/chamie/p/8707420.html)
 
 遂还是拿实验室显卡，显卡 1080ti GPU 上跑吧，训练和测试过程如下：
 

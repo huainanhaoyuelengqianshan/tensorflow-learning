@@ -5,10 +5,8 @@
 相关资料：
 
 - [深度学习笔记——RNN（LSTM、GRU、双向RNN）学习总结](https://blog.csdn.net/mpk_no1/article/details/72875185)
-
 - 莫烦：[什么是循环神经网络 RNN (Recurrent Neural Network) ](https://morvanzhou.github.io/tutorials/machine-learning/keras/2-4-A-RNN/)
 - [递归神经网络](https://feisky.xyz/machine-learning/rnn/)
-
 - ......
 
 递归神经网络（Recurrent Neural Networks，RNN）是两种人工神经网络的总称：时间递归神经网络（recurrent neural network）和结构递归神经网络（recursive neural network）。时间递归神经网络的神经元间连接构成有向图，而结构递归神经网络利用相似的神经网络结构递归构造更为复杂的深度网络。
@@ -39,7 +37,6 @@ RNN 一般指代时间递归神经网络。单纯递归神经网络因为无法�
 相关资料：
 
 - [推荐给初学LSTM或者懂个大概却不完全懂的人](https://blog.csdn.net/roslei/article/details/61912618)
-
 - 莫烦：[LSTM RNN 循环神经网络 (LSTM)](https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/2-4-LSTM/)
 - ......
 
@@ -80,7 +77,7 @@ LSTM 全称叫 Long Short-Term Memory networks，它和传统 RNN 唯一的不�
 
 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/64259652.jpg)
 
-注：GRU（Gated Recurrent Unit）就是 LSTM 的一个变态，这是由 Cho, et al. (2014) 提出。它将忘记门和输入门合成了一个单一的 更新门。同样还混合了细胞状态和隐藏状态，和其他一些改动。最终的模型比标准的 LSTM 模型要简单，也是非常流行的变体。
+注：GRU（Gated Recurrent Unit）就是 LSTM 的一个变态，这是由 Cho, et al. (2014) 提出。它将忘记门和输入门合成了一个单一的更新门。同样还混合了细胞状态和隐藏状态，和其他一些改动。最终的模型比标准的 LSTM 模型要简单，也是非常流行的变体。
 
 ### 测试代码（例子：手写数字识别MNIST）
 
@@ -163,7 +160,7 @@ with tf.Session() as sess:
 
 测试过程如下：
 
-``` python
+``` xml
 Extracting MNIST_data/train-images-idx3-ubyte.gz
 Extracting MNIST_data/train-labels-idx1-ubyte.gz
 Extracting MNIST_data/t10k-images-idx3-ubyte.gz

@@ -1,4 +1,4 @@
-## TensorFlow非线性回归即分类的简单问题，softmax介绍
+## TensorFlow非线性回归以及分类的简单问题，softmax介绍
 
 ### 一、TensorFlow实现非线性回归
 
@@ -186,13 +186,13 @@ Iter 20,Testing Accuracy 0.9137
 
 关于载入数据集代码`mnist = input_data.read_data_sets("MNIST_data", one_hot=True)`补充下：
 
-1. 第一个参数直接填写文件夹名称，则表示使用的为当前程序路径，可以改为其他目录，比如`D:\mnist_data\`
+1. 第一个参数直接填写文件夹名称，则表示使用的为当前程序路径，可以改为其他目录，比如`D:\\mnist_data\\`
 
 2. 下载后的数据集如下：
 
    ![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/52299788.jpg)
 
-   如果下载不下来，可以网上搜索单独下载到本地。
+   如果下载不下来，可以网上搜索单独下载保存到本地。
 
 
 

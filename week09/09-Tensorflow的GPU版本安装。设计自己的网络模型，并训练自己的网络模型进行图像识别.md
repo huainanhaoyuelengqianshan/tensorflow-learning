@@ -67,7 +67,7 @@ PS：只要安装了 GPU 版的 TensorFlow，在计算的时候会自动调用 G
 
 ### 二、使用inception-v3模型进行训练和测试
 
-先了解：
+先了解下：
 
 - [使用自己的数据集训练GoogLenet InceptionNet V1 V2 V3模型（TensorFlow）](https://blog.csdn.net/guyuealian/article/details/81560537)
 - ......
@@ -170,9 +170,7 @@ pause
 解释下：
 
 - 第一行表示：使用 tensorflow 中的 `retrain.py`程序
-
 - `^`：连接符，起到连接的作用
-
 - bottleneck_dir：每张输入图片在 pool3 会得到一个数据，保存到 bottleneck_dir 指定的目录下
 - how_many_training_steps：训练的周期
 - model_dir：指定使用的模型，比如该案例使用的为 inception-v3 模型，指定到该模型的目录，会自动找`inception-2015-12-05.tgz`文件
@@ -288,7 +286,7 @@ with tf.Session() as sess:
 
 第一个步骤：首先要对图片进行预处理，在这里其实就是生成一些`.tfrecord`文件，它是 TensorFlow 官方提供的一种的文件类型，底层是 protobuf，简单讲就是一种二进制存储方式，Google 开源的。有兴趣了解下：[Protobuf简介和使用](https://www.jianshu.com/p/5ea08c6b7031)。过程大概就是：先把图片转换成`.tfrecord`格式文件，在训练模型的过程中，调用`.tfrecord`文件训练。
 
-完整代码：（对应代码：`9-2生成tfrecord.py`，数据集路径，标签文件名字有修改）
+完整代码如下：（对应代码：`9-2生成tfrecord.py`，代码中数据集路径，标签文件名有作修改）
 
 ``` python
 # coding: utf-8
@@ -423,7 +421,7 @@ def _convert_dataset(split_name, filenames, class_names_to_ids, dataset_dir):
     sys.stdout.flush()
 ```
 
-> 解释：`num_per_shard = int(len(filenames) / _NUM_SHARDS)`把数据块做了个切分，其实该例子来说可以不用切分的。什么是切分和不切分呢？若数据量比较小，可以不用切分，存储在一个`.tfrecord`文件即可，若数据量比较大，如几百 G 大小数据，则选择切分为好。上面代码对数据进行了 5 个切分。
+> 解释：`num_per_shard = int(len(filenames) / _NUM_SHARDS)`把数据块做了个切分，其实该例子来说可以不用切分的。什么时候切分和不切分呢？若数据量比较小，可以不用切分，存储在一个`.tfrecord`文件即可，若数据量比较大，如几百 G 大小数据，则选择切分为好。上面代码对数据进行了 5 个切分。
 
 ``` python
 if __name__ == '__main__':

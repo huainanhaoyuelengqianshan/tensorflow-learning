@@ -274,7 +274,7 @@ inception_model 文件夹下是保存的训练结果：（其他文件其实都�
 
 简单说明：左侧文件中 target_class 后面的数字代表目标的分类，数值为 1——1000（inception 模型是用来做 1000 个分类的），target_class_string 后面的字符串值对应到右侧文件的第一列，右侧文件的第二列表示对第一列的描述，相当是对分类的描述，从而来表示属于哪一类。
 
-在运行代码之前，先网上找几张图片保存在当前程序路径的 images 目录下。
+在运行代码之前，先在在当前程序路径下新建 images 文件夹，网上找几张图片保存在 images 下。
 
 完整代码如下：（对应代码：`8-4使用inception-v3做各种图像的识别.py`）
 
@@ -392,7 +392,7 @@ with tf.Session() as sess:
     uid_lookup_path = 'inception_model/imagenet_synset_to_human_label_map.txt'
 ```
 
-代码中，类  `NodeLookup` 的目的就是建立两个文件之间的关系，将`inception_model/imagenet_2012_challenge_label_map_proto.pbtxt`中的 target_class 对应于`inception_model/imagenet_synset_to_human_label_map.txt`中的类。
+代码中，类  `NodeLookup` 的目的就是建立两个文件之间的关系，将`imagenet_2012_challenge_label_map_proto.pbtxt`中的 target_class 对应于`imagenet_synset_to_human_label_map.txt`中的类。
 
 最后的排序代码解释下：
 
