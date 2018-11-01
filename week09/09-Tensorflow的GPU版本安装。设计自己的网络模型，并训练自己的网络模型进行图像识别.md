@@ -114,11 +114,11 @@ PS：只要安装了 GPU 版的 TensorFlow，在计算的时候会自动调用 G
 
 下面是我下载的数据集地址：
 
-- animal：http://www.robots.ox.ac.uk/~vgg/data/pets/
-- flower：http://www.robots.ox.ac.uk/~vgg/data/flowers/
-- plane：http://www.robots.ox.ac.uk/~vgg/data/airplanes_side/airplanes_side.tar
-- house：http://www.robots.ox.ac.uk/~vgg/data/houses/houses.tar
-- guitar：http://www.robots.ox.ac.uk/~vgg/data/guitars/guitars.tar
+- animal：http://www.robots.ox.ac.uk/~vgg/data/pets/	（`images.tar.gz`，~765M）
+- flower：http://www.robots.ox.ac.uk/~vgg/data/flowers/  （`17flowers.tgz`，~58.8M）
+- plane：http://www.robots.ox.ac.uk/~vgg/data/airplanes_side/airplanes_side.tar  （`airplanes_side.tar`，~43.7M）
+- house：http://www.robots.ox.ac.uk/~vgg/data/houses/houses.tar  （`houses.tar`，~16.9M）
+- guitar：http://www.robots.ox.ac.uk/~vgg/data/guitars/guitars.tar  （`guitars.tar`，~24.5M）
 
 从每个数据集选择 500 张自己想要的图片粘贴到 data 目录下对应的文件夹下。
 
