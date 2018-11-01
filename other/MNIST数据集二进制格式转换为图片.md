@@ -217,7 +217,13 @@ for ii in range(numLabels):
 
 参考文章：
 
+- [使用转换mnist数据库保存为bmp图片](http://www.itboth.com/d/YVB7Fb/bmp-python-mnist)
 - [MNIST数据集转换为图像](https://blog.csdn.net/u012507022/article/details/51376626)
 - [如何用python解析mnist图片](https://blog.csdn.net/u014046170/article/details/47445919)
 - [（超详细）读取mnist数据集并保存成图片](https://blog.csdn.net/YF_Li123/article/details/76710028)
 - [使用Python将MNIST数据集转化为图片](https://blog.csdn.net/qq_32166627/article/details/52640730)
+
+延伸：
+
+- [如何将图片转换为mnist格式的数据？](https://www.zhihu.com/question/55963897)
+- 通过 TensorFlow API 接口导出 MNIST 图片的 Python 代码：[导出MNIST的数据集](https://www.cnblogs.com/jyxbk/p/7773295.html)
