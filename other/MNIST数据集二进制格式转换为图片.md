@@ -97,7 +97,7 @@ Pixels are organized row-wise. Pixel values are 0 to 255. 0 means background (wh
 | ------------ | ---------- | ------ |
 | magic number | 图像个数   | labels |
 
-1，对于训练集数据：
+1、对于训练集数据：
 
 ``` python
 import numpy as np
@@ -152,7 +152,13 @@ for ii in range(numLabels):
 
 PS：代码中的`’>IIII’`表示使用大端规则，读取四个整形数（Integer），如果要读取一个字节，则可以用`’>B’`（当然，这里用没用大端规则都是一样的，因此只有两个或两个以上的字节才有用）。
 
-2，对于测试数据集：
+最后会生成：
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181101205405.png)
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181101205605.png)
+
+2、对于测试数据集：
 
 ``` python
 import numpy as np
