@@ -66,7 +66,9 @@
 - [11-Tensorflow在NLP中的使用(一)](/week11/11-Tensorflow在NLP中的使用\(一\).md)
 - [12-Tensorflow在NLP中的使用(二)](/week12/12-Tensorflow在NLP中的使用\(二\).md)
 
+个人补充内容：
 
+- [MNIST数据集二进制格式转换为图片](./MNIST数据集二进制格式转换为图片.md)
 
 ---
 
