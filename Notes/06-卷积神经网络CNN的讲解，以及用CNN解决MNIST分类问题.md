@@ -83,7 +83,7 @@ VALID PADDING：不会超出平面外部，卷积窗口采样后得到一个比�
 - 使用 SAME PADDING 的方式，得到`1*2`的平面
 - 使用 VALID PADDING 的方式，得到`1*1`的平面
 
-**!!!补充：** 关于 padding 表示有在网上找了些博客看看，现摘入如下。
+**!!!补充：** 关于 CNN 中的 padding，表示有在网上找了些博客看看，现摘入如下，以便随时查阅。
 
 **Convolution Arithmetic**
 
