@@ -111,13 +111,13 @@ VALID PADDING：不会超出平面外部，卷积窗口采样后得到一个比�
 
 ![](http://p35l3ejfq.bkt.clouddn.com/20181105165907.png)
 
-> padding 的大小为 k-1。
+> padding 的大小为 k-1
 
 **No zero padding，non-unit strides：** 没有 0 填充，步伐不为 1
 
 ![](http://p35l3ejfq.bkt.clouddn.com/20181105165949.png)
 
-> 输出的尺寸大小：o = ((i-k)/s)向下取整 + 1。
+> 输出的尺寸大小：o = ((i-k)/s)向下取整 + 1
 
 **Zero padding，non-unit strides：** 有 0 填充，步伐不为 1
 
@@ -128,16 +128,13 @@ VALID PADDING：不会超出平面外部，卷积窗口采样后得到一个比�
 参考资料：
 
 - *[A guide to convolution arithmetic for deep learning学习笔记](https://blog.csdn.net/cdknight_happy/article/details/78898791)*
-
 - *[padding](https://blog.csdn.net/jyli2_11/article/details/72784573)*
-
 - *Vincent Dumoulin, Francesco Visin——[A guide to convolution arithmetic for deep learning](https://arxiv.org/abs/1603.07285)， 2016-3-24* 		    arxiv：1603.07285
-
 - *GitHub 地址：[conv_arithmetic](https://github.com/ysglh/conv_arithmetic)*
 
   > *A technical report on convolution arithmetic in the context of deep learning.*
   >
-  > PS：该项目下有卷积 Convolution、转置卷积 Transposed convolution、空洞卷积 Dilated convolution 不同 padding、strides 情况下的动画。
+  > PS：该项目下有卷积 Convolution、转置卷积 Transposed convolution、空洞卷积 Dilated convolution 以及不同 padding、strides 情况下的动画。
 
 #### 权值共享
 
