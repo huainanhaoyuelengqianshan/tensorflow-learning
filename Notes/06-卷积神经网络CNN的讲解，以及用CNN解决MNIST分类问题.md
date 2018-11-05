@@ -83,6 +83,62 @@ VALID PADDING：不会超出平面外部，卷积窗口采样后得到一个比�
 - 使用 SAME PADDING 的方式，得到`1*2`的平面
 - 使用 VALID PADDING 的方式，得到`1*1`的平面
 
+**!!!补充：** 关于 padding 表示有在网上找了些博客看看，现摘入如下。
+
+**Convolution Arithmetic**
+
+输入的尺寸为 i，卷积核大小为 k，stride 的大小为 s，padding 的大小为 p，输出的尺寸为 o，只考虑卷积核和输入的 x 和 y 相等的情况。
+
+**No zero padding，unit strides：** 没有 0 填充，步伐为 1
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181105165632.png)
+
+> 输出的尺寸大小：o = (i - k) + 1
+
+**Zero padding，unit strides：** 有 0 填充，步伐为 1
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181105165750.png)
+
+> 输出的尺寸大小：o = (i - k) + 2p + 1
+
+**Half (same) padding：** 在这里输入与输出的大小一样，这是一个期望的特性
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181105165835.png)
+
+> 这种方式的卷积要进行 padding，并且目的是保证输出和输入具有相同的尺寸。由于卷积过程中使用的卷积核一半大小为奇数，所以为了保证：(i-k)+2p+1 = i，则 p=(k-1)/2=(k/2) 的向下取整。
+
+**Full padding：** 当需要输出比输入更大时
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181105165907.png)
+
+> padding 的大小为 k-1。
+
+**No zero padding，non-unit strides：** 没有 0 填充，步伐不为 1
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181105165949.png)
+
+> 输出的尺寸大小：o = ((i-k)/s)向下取整 + 1。
+
+**Zero padding，non-unit strides：** 有 0 填充，步伐不为 1
+
+![](http://p35l3ejfq.bkt.clouddn.com/20181105170017.png)
+
+> 输出的尺寸大小：o = ((i-k+2*p)/s)向下取整 + 1
+
+参考资料：
+
+- *[A guide to convolution arithmetic for deep learning学习笔记](https://blog.csdn.net/cdknight_happy/article/details/78898791)*
+
+- *[padding](https://blog.csdn.net/jyli2_11/article/details/72784573)*
+
+- *Vincent Dumoulin, Francesco Visin——[A guide to convolution arithmetic for deep learning](https://arxiv.org/abs/1603.07285)， 2016-3-24* 		    arxiv：1603.07285
+
+- *GitHub 地址：[conv_arithmetic](https://github.com/ysglh/conv_arithmetic)*
+
+  > *A technical report on convolution arithmetic in the context of deep learning.*
+  >
+  > PS：该项目下有卷积 Convolution、转置卷积 Transposed convolution、空洞卷积 Dilated convolution 不同 padding、strides 情况下的动画。
+
 #### 权值共享
 
 权值共享这个词最开始其实是由 LeNet5 模型提出来，在 1998 年，LeCun 发布了 LeNet 网络架构，就是下面这个： 

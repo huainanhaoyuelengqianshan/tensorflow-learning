@@ -53,18 +53,18 @@
 
 《深度学习框架Tensorflow学习与应用》笔记：
 
-- [01-Tensorflow简介，Anaconda安装，Tensorflow的CPU版本安装](/week01/01-Tensorflow简介，Anaconda安装，Tensorflow的CPU版本安装.md)
-- [02-Tensorflow的基础使用，包括对图(graphs),会话(session),张量(tensor),变量(Variable)的一些解释和操作](/week02/02-Tensorflow的基础使用，包括对图\(graphs\),会话\(session\),张量\(tensor\),变量\(Variable\)的一些解释和操作.md)
-- [03-Tensorflow线性回归以及分类的简单使用](/week03/03-Tensorflow线性回归以及分类的简单使用.md)
-- [04-softmax，交叉熵(cross-entropy)，dropout以及Tensorflow中各种优化器的介绍](/week04/04-softmax，交叉熵\(cross-entropy\)，dropout以及Tensorflow中各种优化器的介绍.md)
+- [01-Tensorflow简介，Anaconda安装，Tensorflow的CPU版本安装](/Notes/01-Tensorflow简介，Anaconda安装，Tensorflow的CPU版本安装.md)
+- [02-Tensorflow的基础使用，包括对图(graphs),会话(session),张量(tensor),变量(Variable)的一些解释和操作](/Notes/02-Tensorflow的基础使用，包括对图\(graphs\),会话\(session\),张量\(tensor\),变量\(Variable\)的一些解释和操作.md)
+- [03-Tensorflow线性回归以及分类的简单使用](/Notes/03-Tensorflow线性回归以及分类的简单使用.md)
+- [04-softmax，交叉熵(cross-entropy)，dropout以及Tensorflow中各种优化器的介绍](/Notes/04-softmax，交叉熵\(cross-entropy\)，dropout以及Tensorflow中各种优化器的介绍.md)
 - [05-使用Tensorboard进行结构可视化，以及网络运算过程可视化](/week05/05-使用Tensorboard进行结构可视化，以及网络运算过程可视化.md)
-- [06-卷积神经网络CNN的讲解，以及用CNN解决MNIST分类问题-](/week06/06-卷积神经网络CNN的讲解，以及用CNN解决MNIST分类问题.md)
-- [07-递归神经网络LSTM的讲解，以及LSTM网络的使用](/week07/07-递归神经网络LSTM的讲解，以及LSTM网络的使用.md)
-- [08-保存和载入模型，使用Google的图像识别网络inception-v3进行图像识别](/week08/08-保存和载入模型，使用Google的图像识别网络inception-v3进行图像识别.md)
-- [09-Tensorflow的GPU版本安装。设计自己的网络模型，并训练自己的网络模型进行图像识别](/week09/09-Tensorflow的GPU版本安装。设计自己的网络模型，并训练自己的网络模型进行图像识别.md)
-- [10-使用Tensorflow进行验证码识别](/week10/10-使用Tensorflow进行验证码识别.md)
-- [11-Tensorflow在NLP中的使用(一)](/week11/11-Tensorflow在NLP中的使用\(一\).md)
-- [12-Tensorflow在NLP中的使用(二)](/week12/12-Tensorflow在NLP中的使用\(二\).md)
+- [06-卷积神经网络CNN的讲解，以及用CNN解决MNIST分类问题-](/Notes/06-卷积神经网络CNN的讲解，以及用CNN解决MNIST分类问题.md)
+- [07-递归神经网络LSTM的讲解，以及LSTM网络的使用](/Notes/07-递归神经网络LSTM的讲解，以及LSTM网络的使用.md)
+- [08-保存和载入模型，使用Google的图像识别网络inception-v3进行图像识别](/Notes/08-保存和载入模型，使用Google的图像识别网络inception-v3进行图像识别.md)
+- [09-Tensorflow的GPU版本安装。设计自己的网络模型，并训练自己的网络模型进行图像识别](/Notes/09-Tensorflow的GPU版本安装。设计自己的网络模型，并训练自己的网络模型进行图像识别.md)
+- [10-使用Tensorflow进行验证码识别](/Notes/10-使用Tensorflow进行验证码识别.md)
+- [11-Tensorflow在NLP中的使用(一)](/Notes/11-Tensorflow在NLP中的使用\(一\).md)
+- [12-Tensorflow在NLP中的使用(二)](/Notes/12-Tensorflow在NLP中的使用\(二\).md)
 
 个人补充内容：
 
