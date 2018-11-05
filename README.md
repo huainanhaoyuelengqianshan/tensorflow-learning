@@ -57,7 +57,7 @@
 - [02-Tensorflow的基础使用，包括对图(graphs),会话(session),张量(tensor),变量(Variable)的一些解释和操作](/Notes/02-Tensorflow的基础使用，包括对图\(graphs\),会话\(session\),张量\(tensor\),变量\(Variable\)的一些解释和操作.md)
 - [03-Tensorflow线性回归以及分类的简单使用](/Notes/03-Tensorflow线性回归以及分类的简单使用.md)
 - [04-softmax，交叉熵(cross-entropy)，dropout以及Tensorflow中各种优化器的介绍](/Notes/04-softmax，交叉熵\(cross-entropy\)，dropout以及Tensorflow中各种优化器的介绍.md)
-- [05-使用Tensorboard进行结构可视化，以及网络运算过程可视化](/week05/05-使用Tensorboard进行结构可视化，以及网络运算过程可视化.md)
+- [05-使用Tensorboard进行结构可视化，以及网络运算过程可视化](/Notes/05-使用Tensorboard进行结构可视化，以及网络运算过程可视化.md)
 - [06-卷积神经网络CNN的讲解，以及用CNN解决MNIST分类问题-](/Notes/06-卷积神经网络CNN的讲解，以及用CNN解决MNIST分类问题.md)
 - [07-递归神经网络LSTM的讲解，以及LSTM网络的使用](/Notes/07-递归神经网络LSTM的讲解，以及LSTM网络的使用.md)
 - [08-保存和载入模型，使用Google的图像识别网络inception-v3进行图像识别](/Notes/08-保存和载入模型，使用Google的图像识别网络inception-v3进行图像识别.md)
