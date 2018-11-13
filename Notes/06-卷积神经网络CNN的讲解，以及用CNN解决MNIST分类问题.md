@@ -91,37 +91,37 @@ VALID PADDING：不会超出平面外部，卷积窗口采样后得到一个比�
 
 **No zero padding，unit strides：** 没有 0 填充，步伐为 1
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181105165632.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181105165632.png)
 
 > 输出的尺寸大小：o = (i - k) + 1
 
 **Zero padding，unit strides：** 有 0 填充，步伐为 1
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181105165750.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181105165750.png)
 
 > 输出的尺寸大小：o = (i - k) + 2p + 1
 
 **Half (same) padding：** 在这里输入与输出的大小一样，这是一个期望的特性
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181105165835.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181105165835.png)
 
 > 这种方式的卷积要进行 padding，并且目的是保证输出和输入具有相同的尺寸。由于卷积过程中使用的卷积核一半大小为奇数，所以为了保证：(i-k)+2p+1 = i，则 p=(k-1)/2=(k/2) 的向下取整。
 
 **Full padding：** 当需要输出比输入更大时
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181105165907.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181105165907.png)
 
 > padding 的大小为 k-1
 
 **No zero padding，non-unit strides：** 没有 0 填充，步伐不为 1
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181105165949.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181105165949.png)
 
 > 输出的尺寸大小：o = ((i-k)/s)向下取整 + 1
 
 **Zero padding，non-unit strides：** 有 0 填充，步伐不为 1
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181105170017.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181105170017.png)
 
 > 输出的尺寸大小：o = ((i-k+2*p)/s)向下取整 + 1
 
@@ -559,24 +559,24 @@ Iter 1000, Testing Accuracy= 0.9633, Training Accuracy= 0.9617
 
 程序运行完成之后会在当前程序路径下生成 logs 文件夹，logs 文件夹下会有：
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012204117.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012204117.png)
 
 可视化网络训练过程：`tensorboard --logdir=logs目录的路径`
 
 准确率：
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012204758.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012204758.png)
 
 在 logs 文件夹下有两个子文件夹，对应着图中两条线，橙色对应测试集测出来的数据，蓝色对应训练集训练出来的数据，可以看到，两条线非常接近，代表模型没有欠拟合和过拟合现象。如果是过拟合情况，那么蓝色的线就会比较高，橙色的线就会比较低。
 
 交叉熵：
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012205455.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012205455.png)
 
 网络结构：
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012205527.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012205527.png)
 
 fc2 内部：
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012210012.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012210012.png)

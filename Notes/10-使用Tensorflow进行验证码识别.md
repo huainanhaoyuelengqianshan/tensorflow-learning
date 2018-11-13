@@ -266,7 +266,7 @@ else:
 
 最后生成：（截图自视频）
 
-![](http://p35l3ejfq.bkt.clouddn.com//20181012142033.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com//20181012142033.png)
 
 ##### 验证码识别
 
@@ -274,7 +274,7 @@ else:
 
 拷贝 `slim\nets\` 目录到我们程序代码的相同路径（在下面的验证码识别代码中我们会导入 nets）。
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012183851.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012183851.png)
 
 然后修改 `nets\alexnet.py` 网络结构以满足我们的需求，修改后的文件内容：
 
@@ -701,14 +701,14 @@ with tf.Session() as sess:
 
 测试结果：
 
-![](http://p35l3ejfq.bkt.clouddn.com//20181012142132.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com//20181012142132.png)
 
 ``` xml
 label: [5] [1] [3] [7]
 predict: [5] [0] [3] [7]
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com//20181012142044.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com//20181012142044.jpg)
 
 ``` xml
 label: [6] [3] [5] [0]

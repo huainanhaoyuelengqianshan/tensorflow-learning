@@ -280,7 +280,7 @@ plane (score = 0.05573)
 guitar (score = 0.02246)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202426.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012202426.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\flower.jpg
@@ -292,7 +292,7 @@ house (score = 0.01259)
 guitar (score = 0.00810)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202432.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012202432.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\guitar.jpg
@@ -304,7 +304,7 @@ house (score = 0.00346)
 flower (score = 0.00325)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202436.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012202436.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\house.jpg
@@ -316,7 +316,7 @@ plane (score = 0.01133)
 guitar (score = 0.00824)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202439.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012202439.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\plane.jpg
@@ -328,7 +328,7 @@ flower (score = 0.00771)
 house (score = 0.00758)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202441.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012202441.png)
 
 ### 三、从头开始训练新的模型
 

@@ -154,9 +154,9 @@ PS：代码中的`’>IIII’`表示使用大端规则，读取四个整形数�
 
 最后会生成：
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181101205405.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181101205405.png)
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181101205605.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181101205605.png)
 
 2、对于测试数据集：
 

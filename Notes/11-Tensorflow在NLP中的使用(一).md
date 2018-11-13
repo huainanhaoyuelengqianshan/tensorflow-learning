@@ -16,7 +16,7 @@ word2vec 是 Google 于 2013 年开源的一个用于获取词向量的工具包
 
 当我们分析图片或者语音的时候，我们通常都是在分析密集的，高纬度的数据集。我们所需的全部信息都储存在原始数据中。
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012143644.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012143644.png)
 
 当我们处理自然语言问题的时候，我们通常会做分词，然后给每一个词一个编号，比如猫的编号是 120，狗的编号是 343。比如女生的编号是 1232，女王的编号是 2329。这些编号是没有规律，没有联系的，我们从编号中不能得到词与词之间的相关性。
 
@@ -46,7 +46,7 @@ you : 987
 
 Skip-Gram模型刚好和CBOW相反，它是通过目标词汇来预测上下文词汇。例如目标词汇是“早餐”，上下文词汇可能是“今天”和“吃面包”。
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012144601.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012144601.png)
 
 对于这两种模型的训练，我们可能容易想到，使用 softmax 作为输出层来训练网络。这个方法是可
 行的，只不过使用 softmax 作为输出层计算量将会是巨大的。假如我们已知上下文，需要训练模型
@@ -56,7 +56,7 @@ Skip-Gram模型刚好和CBOW相反，它是通过目标词汇来预测上下文�
 。NCE 使用的方法是把上下文 h 对应地正确的目标词汇标记为正样本（D=1），然后再抽取一些错
 误的词汇作为负样本（D=0）。然后最大化目标函数的值。
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012144725.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012144725.png)
 
 当真实的目标单词被分配到较高的概率，同时噪声单词的概率很低时，目标函数也就达到最大值
 了。计算这个函数时，只需要计算挑选出来的k个噪声单词，而不是整个语料库。所以训练速度会
@@ -64,7 +64,7 @@ Skip-Gram模型刚好和CBOW相反，它是通过目标词汇来预测上下文�
 
 ### 三、Word2vec图形化
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012144910.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012144910.png)
 
 ### 四、CNN在自然语言处理的应用
 
@@ -76,7 +76,7 @@ CNN 应用于 NLP 的任务，处理的往往是以矩阵形式表达的句子�
 （比如前面说到的 word2vec）。假设我们一共有 10 个词，每个词都用 128 维的向量来表示，那么
 我们就可以得到一个 10×128 维的矩阵。这个矩阵就相当于是一副“图像”。
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012145126.png)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/20181012145126.png)
 
 GitHub 上的例子：[cnn-text-classification-tf](https://github.com/dennybritz/cnn-text-classification-tf)
 
