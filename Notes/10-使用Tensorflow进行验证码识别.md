@@ -26,7 +26,7 @@
 
 1）验证码识别方法一
 
-- 把标签转为向量，向量长度为 40。比如有一个验证码为 0782 ![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/45205058.jpg)
+- 把标签转为向量，向量长度为 40。比如有一个验证码为 0782 ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-45205058.jpg)
 
 - 它的标签可以转为长度为 40 的向量：1000000000 0000000100 0000000010 0010000000
 
@@ -51,11 +51,11 @@
 
 多个相似任务有多个数据集，交替训练：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/89492107.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-89492107.jpg)
 
 多个相似任务只有一个数据集，联合训练：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/12109228.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-12109228.jpg)
 
 #### 3、采用多任务联合训练进行验证码识别
 
@@ -131,11 +131,11 @@ if __name__ == '__main__':
 生成完毕
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/43920597.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-43920597.jpg)
 
 每张验证码图片像素大小为`160*60`：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/56189029.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-56189029.jpg)
 
 
 
@@ -266,7 +266,7 @@ else:
 
 最后生成：（截图自视频）
 
-![](http://p35l3ejfq.bkt.clouddn.com//20181012142033.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com//20181012142033.png)
 
 ##### 验证码识别
 
@@ -701,7 +701,7 @@ with tf.Session() as sess:
 
 测试结果：
 
-![](http://p35l3ejfq.bkt.clouddn.com//20181012142132.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com//20181012142132.png)
 
 ``` xml
 label: [5] [1] [3] [7]

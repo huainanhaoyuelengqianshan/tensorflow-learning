@@ -12,7 +12,7 @@ Tensorflow 是一个编程系统，使用图（graphs）来表示计算任务，
 （operation），一个 op 获得 0 个或多个 Tensor，执行计算，产生 0 个或多个 Tensor。Tensor 看作是
 一个 n 维的数组或列表。图必须在会话（Session）里被启动。Tensorflow 结构如下：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/31113870.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-31113870.jpg)
 
 关于张量（tensor）详细解释下：
 

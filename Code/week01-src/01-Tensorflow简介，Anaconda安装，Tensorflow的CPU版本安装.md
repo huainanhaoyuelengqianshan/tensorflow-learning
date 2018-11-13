@@ -14,7 +14,7 @@
 
 1. 打开 cmd 输入命令`jupyter notebook --generate-config`，可以看到生成文件的路径（可以看到默认在`C:\Users\用户名\.jupyter`文件夹下），这个就是生成的配置文件`jupyter_notebook_config.py`
 
-   ![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/14115072.jpg)
+   ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-14115072.jpg)
 
 2. 然后打开这个配置文件，找到`#c.NotebookApp.notebook_dir = ' '`，把它改成：
 

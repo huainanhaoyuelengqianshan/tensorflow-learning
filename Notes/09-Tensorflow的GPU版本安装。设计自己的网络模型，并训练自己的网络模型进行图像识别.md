@@ -10,7 +10,7 @@
 
 下载地址：https://www.nvidia.cn/Download/index.aspx?lang=cn
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/26477203.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-26477203.jpg)
 
 选择适合自己电脑的显卡驱动下载。安装过程很简单，直接下一步就可以。
 
@@ -26,7 +26,7 @@
 
 > 控制面板 --> NVIDIA控制面板 --> 帮助 --> 系统信息 --> 组件 --> nvidia.dll 后面的 cuda 参数
 >
-> ![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/83310095.jpg)
+> ![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-83310095.jpg)
 
 下载对应版本的 CUDA，下载地址：https://developer.nvidia.com/cuda-downloads
 
@@ -88,11 +88,11 @@ PS：只要安装了 GPU 版的 TensorFlow，在计算的时候会自动调用 G
 
 如下图，inception-v3 模型的 pool3 位置下面的所有卷积层、池化层的参数都固定，它们是大量图片训练出来的参数，如果你也是做图像分类的话，底下那些参数都是非常好的参数，我们直接拿来用（毕竟底下的卷积都是用来做图像特征提取的，而这些特征都是经过大量图片数据学习到的），也适用我们的任务。
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/92827217.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-92827217.jpg)
 
 图中 softmax 是最后用于做分类的，1000 个分类，注意到右侧多出了一路 input，多出的这一路是用来对自己的图片分类任务新添加的结构。假如我们要对图像 5 分类，pool3 连接的 input 这一路，就可以用来进行 5 分类，这样，前面的所有层都不用训练，只训练最后一层，最后一层就是用来做分类的。
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/54741870.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-54741870.jpg)
 
 
 
@@ -100,15 +100,15 @@ PS：只要安装了 GPU 版的 TensorFlow，在计算的时候会自动调用 G
 
 先在磁盘下准备这样一个目录，比如在 D 盘：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/4566670.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-4566670.jpg)
 
 其中 bottleneck 用来保存训练过程的中间文件，data 文件夹里面内容如下：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/32645120.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-32645120.jpg)
 
 这里需要图片分类，一共五个类，每个类对应于一个文件夹，每个文件夹里面为该类的训练文件，这里以 flower 为例：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/18908364.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-18908364.jpg)
 
 每个文件夹里有 500 张图片。图片数据集可以从该网站下载：http://www.robots.ox.ac.uk/~vgg/data/
 
@@ -124,11 +124,11 @@ PS：只要安装了 GPU 版的 TensorFlow，在计算的时候会自动调用 G
 
 接下来是 images 文件夹，里面保存用来识别测试的图片，这里给出了五张图片，对应于五类需要分类的图片：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/61891662.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-61891662.jpg)
 
 inception_model 文件夹里是 inception-v3 模型，之后的训练将要用到这个模型的结构：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/47071127.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-47071127.jpg)
 
 上面的工作做完之后，我们可以使用官方提供的程序进行训练了。
 
@@ -180,7 +180,7 @@ pause
 
 最后，执行脚本开始训练，训练结束后，我们得到两个文件：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/43976984.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-43976984.jpg)
 
 其中 output\_graph.pb 为训练后得到的模型，output\_labels.txt 文件内容如下：
 
@@ -280,7 +280,7 @@ plane (score = 0.05573)
 guitar (score = 0.02246)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202426.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202426.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\flower.jpg
@@ -292,7 +292,7 @@ house (score = 0.01259)
 guitar (score = 0.00810)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202432.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202432.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\guitar.jpg
@@ -304,7 +304,7 @@ house (score = 0.00346)
 flower (score = 0.00325)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202436.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202436.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\house.jpg
@@ -316,7 +316,7 @@ plane (score = 0.01133)
 guitar (score = 0.00824)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202439.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202439.png)
 
 ``` xml
 E:\Python-projects\mnist\retrain\images\plane.jpg
@@ -328,7 +328,7 @@ flower (score = 0.00771)
 house (score = 0.00758)
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/20181012202441.jpg)
+![](http://p35l3ejfq.bkt.clouddn.com/20181012202441.png)
 
 ### 三、从头开始训练新的模型
 
@@ -336,11 +336,11 @@ house (score = 0.00758)
 
 还是以上节图片分类任务为例，训练图片还是原来这些，简单点，这次每个分类中的图片减少到 300 张，这样总共 1500（=5*300）张图片（1000 张为训练集，500 张为测试集，下面会讲到）：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/32645120.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-32645120.jpg)
 
 !!!准备工作：在 https://github.com/tensorflow/models 提供了很多官方的模型，这节我们要用的 slim 模型，先下载 slim（新版中 slim 路径位置已经处在：[models](https://github.com/tensorflow/models)/[research](https://github.com/tensorflow/models/tree/master/research)/[slim](https://github.com/tensorflow/models/tree/master/research/slim)，不是视频中的 models 目录下）。slim 文件如下：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/42918227.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-42918227.jpg)
 
 第一个步骤：首先要对图片进行预处理，在这里其实就是生成一些`.tfrecord`文件，它是 TensorFlow 官方提供的一种的文件类型，底层是 protobuf，简单讲就是一种二进制存储方式，Google 开源的。有兴趣了解下：[Protobuf简介和使用](https://www.jianshu.com/p/5ea08c6b7031)。过程大概就是：先把图片转换成`.tfrecord`格式文件，在训练模型的过程中，调用`.tfrecord`文件训练。
 
@@ -520,7 +520,7 @@ if __name__ == '__main__':
 
 执行完之后，D:/retrain/data/ 目录下就会多出这么些文件：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/30734712.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-30734712.jpg)
 
 前面第一到第五个文件为测试集数据块，第六到第十个文件训练集数据块。打开 labels.txt，内容如下：
 
@@ -534,11 +534,11 @@ if __name__ == '__main__':
 
 在下载的 slim 中找到 datasets 文件夹，新建`myimages.py`文件，如何写？——参考该文件夹其他的文件，主要修改的地方有这么几处：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/59524967.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-59524967.jpg)
 
 再打开 datasets 文件夹下的 `dataset_factory.py`文件，添加：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/14643042.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-14643042.jpg)
 
 再编写个批处理文件`train.bat`，内容如下：
 

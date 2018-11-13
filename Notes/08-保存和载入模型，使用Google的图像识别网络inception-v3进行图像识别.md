@@ -103,7 +103,7 @@ Iter 10,Testing Accuracy 0.9171
 
 最后 net 目录下有如下文件：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/50408346.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-10-50408346.jpg)
 
 #### 2、载入模型
 
@@ -248,19 +248,19 @@ with tf.Session() as sess:
 
 在 Jupyter Notebook 中运行代码后显示：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/50884014.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-10-50884014.jpg)
 
 然后在相应目录会出现如下两个文件夹：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/14887577.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-10-14887577.jpg)
 
 其中，inception_log 文件夹保存模型的结构：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/84328307.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-10-84328307.jpg)
 
 inception_model 文件夹下是保存的训练结果：（其他文件其实都是`inception-2015-12-05.tgz`文件解压后的）
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/79742604.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-10-79742604.jpg)
 
 其中，`classify_image_graph_def.pb`是已经训练过的 inception-v3 的模型。
 
@@ -270,7 +270,7 @@ inception_model 文件夹下是保存的训练结果：（其他文件其实都�
 
 两个文件内容如下：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-10/98506442.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-10-98506442.jpg)
 
 简单说明：左侧文件中 target_class 后面的数字代表目标的分类，数值为 1——1000（inception 模型是用来做 1000 个分类的），target_class_string 后面的字符串值对应到右侧文件的第一列，右侧文件的第二列表示对第一列的描述，相当是对分类的描述，从而来表示属于哪一类。
 
@@ -418,7 +418,7 @@ with tf.Session() as sess:
 images/lion.jpg
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/34173500.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-34173500.jpg)
 
 ``` xml
 top_k: [190  11 206  85  30]
@@ -433,7 +433,7 @@ jaguar, panther, Panthera onca, Felis onca (score = 0.00033)
 images/panda.jpg
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/5249455.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-5249455.jpg)
 
 ``` xml
 top_k: [169   7 222 374 878]
@@ -448,7 +448,7 @@ earthstar (score = 0.00040)
 images/rabbit.jpg
 ```
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-11/48396384.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-11-48396384.jpg)
 
 ``` xml
 top_k: [164 840 129 950 188]

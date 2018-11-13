@@ -67,19 +67,19 @@ with tf.Session() as sess:
 
 通过使用 `with tf.name_scope('input')` 来设置命名空间标记可视化参数，程序运行之后将在当前目录生成一个 logs 目录，目录下有如下内容：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/92630115.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-92630115.jpg)
 
 然后 cmd 下运行下面这个命令：`tensorboard --logdir=D:\Tensorflow\logs`
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/3161246.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-3161246.jpg)
 
 打开浏览器，输入`http://Jaybo-pc:6006`，可以看到：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/11610986.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-11610986.jpg)
 
 然后可以点击观察里面的一些细节：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/4454287.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-4454287.jpg)
 
 ### 二、演示如何让参数细节可视化，绘制各个参数变化情况
 
@@ -179,17 +179,17 @@ with tf.Session() as sess:
 
 Tensorboard 内容大致如下：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/53721827.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-53721827.jpg)
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/15066889.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-15066889.jpg)
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/54883213.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-54883213.jpg)
 
 #### 手写数字识别Embeding
 
 下面进行手写数字识别 Embeding（[官网链接](https://www.tensorflow.org/guide/embedding)）可视化过程：（对应代码：`5-4tensorboard可视化.py`）
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/21761405.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-21761405.jpg)
 
 先把 Embeding 文件`mnist_10k_sprite.png`粘贴到如上 data 文件夹下。
 
@@ -339,11 +339,11 @@ Iter 1000, Testing Accuracy= 0.9054
 
 程序运行完毕，最后会在`D:\TensorFlow\projector\projector`文件夹下生成如下文件：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/9243596.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-9243596.jpg)
 
 然后 cmd 下运行：`tensorboard --logdir=D:\TensorFlow\projector\projector`
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/75085803.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-75085803.jpg)
 
 
 

@@ -2,11 +2,11 @@
 
 ### 一、二次代价函数(quadratic cost)
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/97193262.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-97193262.jpg)
 
 其中，C 表示代价函数，x 表示样本，y 表示实际值，a 表示输出值，n 表示样本的总数。为简单起见，我们以一个样本为例进行说明，此时二次代价函数为：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/95273637.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-95273637.jpg)
 
 - a=σ(z), z=∑W j *X j +b
 
@@ -15,14 +15,14 @@
 假如我们使用梯度下降法(Gradient descent)来调整权值参数的大小，权值 w 和偏置 b 的梯度推导
 如下：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/68276611.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-68276611.jpg)
 
 其中，z 表示神经元的输入，σ 表示激活函数。w 和 b 的梯度跟激活函数的梯度成正比，激活函数的
 梯度越大，w 和 b 的大小调整得越快，训练收敛得就越快。
 
-假设我们的激活函数是 sigmoid 函数，其公式为：![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/88969788.jpg)
+假设我们的激活函数是 sigmoid 函数，其公式为：![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-88969788.jpg)
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/21437403.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-21437403.jpg)
 
 - 假设我们的目标是收敛到 1，A 点为 0.82，距离目标比较远，梯度比较大，权值调整比较大；B 点为 0.98，距离目标比较近，梯度较小，权值调整比较小。调整方案合理。
 - 假设我们的目标是收敛到 0，A 点为 0.82，距离目标比较近，梯度比较大，权值调整比较大；B 点为 0.98，距离目标比较远，梯度较小，权值调整比较小。调整方案不合理。
@@ -31,21 +31,21 @@
 
 换一个思路，我们不改变激活函数，而是改变代价函数，改用交叉熵代价函数：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/99827572.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-99827572.jpg)
 
 其中，C 表示代价函数，x 表示样本，y 表示实际值，a 表示输出值，n 表示样本的总数。
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/69236364.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-69236364.jpg)
 
 对 w 和 b 求偏导：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/31579009.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-31579009.jpg)
 
 最后得出：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/58692742.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-58692742.jpg)
 
-- 权值和偏置值的调整与![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/4716138.jpg)无关，另外，梯度公式中的![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/89981849.jpg)表示输出值与实
+- 权值和偏置值的调整与![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-4716138.jpg)无关，另外，梯度公式中的![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-89981849.jpg)表示输出值与实
   际值的误差。所以当误差越大时，梯度就越大，参数 w 和 b 的调整就越快，训练的速度也就越快。
 - 如果输出神经元是线性的，那么二次代价函数就是一种合适的选择。如果输出神经元是 S 型函数，
   那么比较适合用交叉熵代价函数。
@@ -177,9 +177,9 @@ Iter 20,Testing Accuracy 0.9137			Iter 20,Testing Accuracy 0.9217
 
 ### 四、欠拟合、拟合、过拟合
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/54002718.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-54002718.jpg)
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/7703425.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-7703425.jpg)
 
 防止过拟合：
 
@@ -189,13 +189,13 @@ Iter 20,Testing Accuracy 0.9137			Iter 20,Testing Accuracy 0.9217
 
 2）正则化方法
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/50341618.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-50341618.jpg)
 
 正则化方法是指在进行代价函数优化时，在代价函数后面加上一个正则项，这个正则项是跟权值相关的。入正则项系数，权衡正则项与 C0 的比重，n 是训练集样本的大小，它会使得原先那些处于 0 附近的权值往 0 移动，从而降低模型的复杂度，防止过拟合。
 
 3）Dropout
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/33330943.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-33330943.jpg)
 
 正则化方法通过在代价函数后面追加正则项来防止过度拟合的，还有一个方法是通过修改神经元本身的机构来实现的，称为 Dropout，其背后的情况是使部分神经元工作，部分神经元不工作。该方法是对神经网络进行训练时用到的一种技巧。
 
@@ -405,7 +405,7 @@ Tensorflow 提供了下面这些种优化器：
 
 - 批量梯度下降法：批量梯度下降算是一种折中的方案，从总样本中选取一个批次（比如一共有 10000 个样本，随机选取 100 个样本作为一个 batch），然后计算这个 batch 的总误差，根据总误差来更新权值。
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/17510205.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-17510205.jpg)
 
 其中，
 
@@ -418,18 +418,18 @@ J(W)： 代价函数
 
 #### SGD：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/26957051.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-26957051.jpg)
 
 #### Momentum：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/65038654.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-65038654.jpg)
 
 当前权值的改变会受到上一次权值改变的影响，类似于小球向下滚动的时候带上了惯性。这样
 可以加快小球的向下的速度。
 
 #### NAG（Nesterov accelerated gradient）：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/25559890.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-25559890.jpg)
 
 NAG 在 TF 中跟 Momentum 合并在同一个函数 `tf.train.MomentumOptimizer` 中，可以通过参
 数配置启用。
@@ -438,7 +438,7 @@ NAG 在 TF 中跟 Momentum 合并在同一个函数 `tf.train.MomentumOptimizer`
 
 #### Adagrad：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/53673825.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-53673825.jpg)
 
 它是基于 SGD 的一种算法，它的核心思想是对比较常见的数据给予它比较小的学习率去调整
 参数，对于比较罕见的数据给予它比较大的学习率去调整参数。它很适合应用于数据稀疏的数
@@ -452,20 +452,20 @@ Adagrad 主要的优势在于不需要人为的调节学习率，它可以自动
 
 RMS（Root Mean Square）是均方根的缩写。
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/58496947.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-58496947.jpg)
 
 RMSprop 借鉴了一些 Adagrad 的思想，不过这里 RMSprop 只用到了前 t-1 次梯度平方的平均值加上当前梯度的平方的和的开平方作为学习率的分母。这样 RMSprop 不会出现学习率越来越低的问题，而且也能自己调节学习率，并且可以有一个比较好的效果。
 
 #### Adadelta：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/379401.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-379401.jpg)
 
 使用 Adadelta 我们甚至不需要设置一个默认学习率，在 Adadelta 不需要使用学习率也可以达
 到一个非常好的效果。
 
 #### Adam：
 
-![](http://p35l3ejfq.bkt.clouddn.com/18-10-8/49863095.jpg)
+![](https://img-1256179949.cos.ap-shanghai.myqcloud.com/18-10-8-49863095.jpg)
 
 就像 Adadelta 和 RMSprop 一样 Adam 会存储之前衰减的平方梯度，同时它也会保存之前衰减
 的梯度。经过一些处理之后再使用类似 Adadelta 和 RMSprop 的方式更新参数。
